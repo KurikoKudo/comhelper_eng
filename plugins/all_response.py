@@ -45,14 +45,14 @@ def mention_pr(message):
     message.send(pr_link)
 
 
-@respond_to('Please check users information')
+@respond_to('Please confirm user information')
 def mention_user(message):
     """
     ユーザー情報確認コマンド用関数
     """
     users = check_all_users_by_slack()
     message.send(users)
-    message.send('上記のメンバーでユーザー情報を更新したよ！')
+    message.send('I updated user information by the above members!')
 
 
 @respond_to('Please start discussions on ')
